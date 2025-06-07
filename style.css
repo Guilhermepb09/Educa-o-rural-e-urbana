@@ -1,0 +1,497 @@
+/* Estilos Gerais (Opcional, mas recomendado para resetar margens/padding) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Apenas para visualização do navbar */
+}
+
+/* Estilos do Navbar */
+.navbar {
+    background-color: #28a745; /* Um verde que remete à natureza e esperança */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adiciona padding nas laterais em telas menores */
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #e2e6ea; /* Cor mais clara ao passar o mouse */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        margin-bottom: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block; /* Garante que o link ocupe toda a largura */
+        padding: 10px 0;
+    }
+}
+/* Variáveis de Cores (para facilitar a manutenção) */
+:root {
+    --color-primary: #28a745; /* Verde do navbar, para consistência */
+    --color-secondary: #007bff; /* Um azul para botões e detalhes */
+    --color-background-light: #f9f9f9;
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --color-rural-bg: #e8f5e9; /* Verde claro para rural */
+    --color-urban-bg: #e3f2fd; /* Azul claro para urbano */
+}
+
+/* Estilos Gerais do Main */
+main {
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+}
+
+section {
+    padding: 60px 20px;
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Um verde um pouco mais escuro */
+    border-color: #218838;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Um azul um pouco mais escuro */
+    border-color: #0056b3;
+}
+
+/* Seção Hero (Banner Principal) */
+.hero-section {
+    background: linear-gradient(rgba(40, 167, 69, 0.7), rgba(40, 167, 69, 0.7)), url('https://via.placeholder.com/1500x600/66BB6A/FFFFFF?text=Paisagem+Rural+e+Urbana') no-repeat center center/cover;
+    color: var(--color-text-light);
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px; /* Altura mínima para o banner */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    color: var(--color-text-light);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: var(--color-text-light);
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* Seção de Duas Colunas (Diferenças) */
+.two-column-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre as colunas */
+    background-color: var(--color-background-light);
+    padding: 80px 20px;
+}
+
+.column {
+    flex: 1; /* Faz as colunas ocuparem o espaço disponível */
+    min-width: 300px; /* Largura mínima para cada coluna antes de quebrar */
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rural-column {
+    background-color: var(--color-rural-bg);
+    border-left: 5px solid var(--color-primary);
+}
+
+.urban-column {
+    background-color: var(--color-urban-bg);
+    border-left: 5px solid var(--color-secondary);
+}
+
+.column-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.column-content p {
+    font-size: 1em;
+    margin-bottom: 25px;
+}
+
+.column-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Galeria */
+.gallery-section {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo de grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background-color: var(--color-background-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    display: block;
+}
+
+.gallery-item p {
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-text-dark);
+}
+
+/* Seção Call-to-Action (CTA) */
+.cta-section {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('https://via.placeholder.com/1500x400/90CAF9/FFFFFF?text=Pontes+e+Conexoes') no-repeat center center/cover;
+    color: var(--color-text-light);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.cta-content {
+    max-width: 800px;
+}
+
+.cta-content h2 {
+    color: var(--color-text-light);
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: var(--color-text-light);
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Responsividade Geral do Main */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .two-column-section {
+        flex-direction: column; /* Empilha as colunas em telas menores */
+    }
+
+    .column {
+        min-width: unset; /* Remove a largura mínima para melhor ajuste */
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .cta-content h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* Variáveis de Cores (se já não estiverem definidas no seu CSS) */
+:root {
+    --color-primary: #28a745; /* Verde associado ao rural/natureza */
+    --color-secondary: #007bff; /* Azul associado ao urbano/tecnologia */
+    --color-dark-bg: #2c3e50; /* Um tom de azul/cinza escuro para o footer */
+    --color-text-light: #ecf0f1; /* Cor de texto clara para o fundo escuro */
+    --color-link-hover: #3498db; /* Um azul mais vibrante para hover */
+}
+
+/* Estilos do Footer */
+footer {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    padding: 60px 20px 20px; /* Mais padding no topo para espaço */
+    font-family: Arial, sans-serif;
+    border-top: 5px solid var(--color-primary); /* Uma borda superior para destaque */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Espaçamento entre as seções do footer */
+    text-align: left; /* Alinhar texto à esquerda nas colunas */
+}
+
+.footer-brand,
+.footer-links,
+.footer-contact {
+    flex: 1; /* Faz as seções tentarem ocupar o mesmo espaço */
+    min-width: 250px; /* Largura mínima antes de quebrar */
+    margin-bottom: 30px; /* Espaçamento inferior em mobile */
+}
+
+/* Títulos das seções do footer */
+footer h3, footer h4 {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+/* Informações da Marca/Título Principal */
+.footer-brand p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Ícones Sociais */
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons img {
+    width: 28px; /* Tamanho dos ícones */
+    height: 28px;
+    filter: brightness(0) invert(1); /* Garante que os ícones fiquem brancos */
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Efeito de "levitar" no hover */
+}
+
+/* Links de Navegação */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Informações de Contato */
+.footer-contact p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.footer-contact p a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-contact p a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Seção de Direitos Autorais */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+}
+
+.footer-bottom p {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas em telas menores */
+        align-items: center; /* Centraliza as seções */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        min-width: unset; /* Remove a largura mínima para melhor ajuste */
+        max-width: 90%; /* Limita a largura em telas pequenas */
+        margin-bottom: 40px; /* Mais espaço entre as seções empilhadas */
+    }
+
+    .social-icons {
+        justify-content: center; /* Centraliza ícones em mobile */
+        display: flex;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os links da lista */
+    }
+}
